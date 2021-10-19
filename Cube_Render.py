@@ -4,69 +4,6 @@ import copy
 import math
 
 
-cube_size = (
-    (0.5, -0.5, -0.5),
-    (0.5, 0.5, -0.5),
-    (-0.5, 0.5, -0.5),
-    (-0.5, -0.5, -0.5),
-    (0.5, -0.5, 0.5),
-    (0.5, 0.5, 0.5),
-    (-0.5, -0.5, 0.5),
-    (-0.5, 0.5, 0.5)
-)
-
-# verticies = [
-#    [0.5, -0.5, -0.5],
-#    [0.5, 0.5, -0.5],
-#    [-0.5, 0.5, -0.5],
-#    [-0.5, -0.5, -0.5],
-#    [0.5, -0.5, 0.5],
-#    [0.5, 0.5, 0.5],
-#    [-0.5, -0.5, 0.5],
-#    [-0.5, 0.5, 0.5]
-# ]
-
-edges = (
-    (0, 1),
-    (0, 3),
-    (0, 4),
-    (2, 1),
-    (2, 3),
-    (2, 7),
-    (6, 3),
-    (6, 4),
-    (6, 7),
-    (5, 1),
-    (5, 4),
-    (5, 7)
-)
-
-surface = (
-    (0, 1, 2, 3),
-    (3, 2, 7, 6),
-    (6, 7, 5, 4),
-    (4, 5, 1, 0),
-    (1, 5, 7, 2),
-    (4, 0, 3, 6)
-)
-
-
-# def cube(x, y, z):
-#    for ver in range(8):
-#        verticies[ver][0] = cube_size[ver][0] + x
-#    for ver in range(8):
-#        verticies[ver][1] = cube_size[ver][1] + y
-#    for ver in range(8):
-#        verticies[ver][2] = cube_size[ver][2] + z
-#
-#    glBegin(GL_QUADS)
-#    for surfaces in surface:
-#        glColor4fv((145, 250, 130, 255))
-#        for vertex in surfaces:
-#            glVertex3fv(verticies[vertex])
-#    glEnd()
-
-
 def outline(vert, corners):
     glBegin(GL_LINES)
     for edge in corners:
